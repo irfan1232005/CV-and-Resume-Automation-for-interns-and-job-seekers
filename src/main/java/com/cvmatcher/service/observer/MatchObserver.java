@@ -10,5 +10,14 @@ import com.cvmatcher.model.User;
  * future email notification, etc).
  */
 public interface MatchObserver {
+
+    /**
+     * Invoked when a candidate achieves a exceptionally high compatibility score 
+     * with a specific job notice.
+     *
+     * @param user   The candidate (user) who achieved the high match.
+     * @param notice The target job notice the candidate was matched against.
+     * @param result The matching result containing the final score and breakdown details.
+     */
     void onHighMatch(User user, JobNotice notice, MatchResult result);
 }
